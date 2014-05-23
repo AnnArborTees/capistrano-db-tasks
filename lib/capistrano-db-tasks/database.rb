@@ -136,15 +136,6 @@ module Database
       local_db.load(remote_db.output_file, instance.fetch(:db_local_clean))
     end
 
-    def local_to_remote(instance)
-      local_db  = Database::Local.new(instance)
-      remote_db = Database::Remote.new(instance)
-
-      check(local_db, remote_db)
-
-      local_db.dump.upload
-      remote_db.load(local_db.output_file, instance.fetch(:db_local_clean))
-    end
   end
 
 end

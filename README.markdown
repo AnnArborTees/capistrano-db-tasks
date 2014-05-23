@@ -13,6 +13,11 @@ Commands mysql, mysqldump (or pg_dump, psql), bzip2 and unbzip2 must be in your 
 
 Feel free to fork and to add more database support or new tasks.
 
+Changes from original
+=======
+Removed all ability to override production data
+
+
 Install
 =======
 
@@ -51,14 +56,11 @@ Available tasks
 ===============
 
     app:local:sync      || app:pull     # Synchronize your local assets AND database using remote assets and database
-    app:remote:sync     || app:push     # Synchronize your remote assets AND database using local assets and database
 
     assets:local:sync   || assets:pull  # Synchronize your local assets using remote assets
-    assets:remote:sync  || assets:push  # Synchronize your remote assets using local assets
-
+    
     db:local:sync       || db:pull      # Synchronize your local database using remote database data
-    db:remote:sync      || db:push      # Synchronize your remote database using local database data
-
+    
 Example
 =======
 
@@ -74,10 +76,5 @@ Contributors
 * jakemauer  (http://github.com/jakemauer)
 * tjoneseng  (http://github.com/tjoneseng)
 
-TODO
-====
-
-* May be change project's name as it's not only database tasks now :)
-* Add tests
 
 Copyright (c) 2009 [Sébastien Gruhier - XILINUS], released under the MIT license
